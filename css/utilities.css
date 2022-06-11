@@ -1,0 +1,56 @@
+@import url("iransans.css");
+@import url("reusables.css");
+@import url("utilities.css");
+@import url("login.css");
+
+input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 100%;
+  padding: 10px;
+  font-family: IRANSans;
+}
+
+.good {
+  margin: 30px 0;
+  padding: 0;
+  height: 50px;
+  background-color: rgba(38, 230, 0, 0.7);
+  cursor: pointer;
+}
+
+.good:hover {
+  background-color: rgba(38, 230, 0);
+}
+
+.bad {
+  padding: 0;
+  height: 25px;
+  width: 65px;
+  background-color: rgba(230, 0, 0);
+  color: #fff;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.bad:hover {
+  background-color: rgb(190, 0, 0);
+}
+
+.prices_users--types {
+  border: 1px #333 solid;
+  display: flex;
+  text-align: center;
+  height: 25px;
+}
+
+.prices_btn {
+  border: none;
+  width: 60px;
+  height: 100%;
+  cursor: pointer;
+  font-size: 10px;
+  padding: 0;
+}

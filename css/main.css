@@ -1,3 +1,35 @@
-body {
-  background-color: red;
+@import url("iransans.css");
+@import url("reusables.css");
+@import url("utilities.css");
+@import url("login.css");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: IRANSans;
+  direction: rtl;
+}
+
+#app_page {
+  background-color: rgba(0, 200, 200, 0.15);
+  height: 100vh;
+}
+
+.app {
+  padding: 30px 60px;
+}
+
+.content {
+  margin-top: 10px;
+  height: 75vh;
+}
+
+footer {
+  text-align: left;
+  margin-left: 60px;
 }
