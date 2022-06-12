@@ -24,7 +24,13 @@ html {
   padding: 30px 60px;
 }
 
+.header_wrapper {
+  align-items: center;
+  justify-content: space-between;
+}
+
 .users {
+  align-items: center;
   font-size: 25px;
 }
 
@@ -33,6 +39,7 @@ html {
 }
 
 .content {
+  display: flex;
   margin-top: 10px;
   height: 75vh;
 }
@@ -49,6 +56,7 @@ footer {
 
 #prices {
   flex-basis: 20%;
+  border-left: 1px #222 dashed;
 }
 
 .prices_users {
@@ -59,8 +67,10 @@ footer {
 
 #receipt {
   flex-basis: 60%;
+  flex-direction: column;
   justify-content: space-between;
   row-gap: 3px;
+  border-left: 1px #222 dashed;
 }
 
 .receipt_wrapper--content {
@@ -73,6 +83,12 @@ footer {
   margin-top: 20px;
 }
 
+.previous_total,
+.final_total {
+  column-gap: 10px;
+  align-items: center;
+}
+
 .previous_total--fee,
 .final_total--fee {
   font-size: 30px;
@@ -80,10 +96,12 @@ footer {
 
 #extra {
   flex-basis: 20%;
+  flex-direction: column;
 }
 
 #brief {
   height: 70%;
+  border-bottom: 1px #222 solid;
 }
 
 .brief_wrapper ion-icon {
@@ -104,6 +122,8 @@ footer {
 .brief_massage {
   background-color: rgba(70, 150, 180, 0.1);
   padding: 25px 0;
+  flex-direction: column;
+  align-items: center;
 }
 
 .brief_title {

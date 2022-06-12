@@ -1,6 +1,8 @@
+@import url("shabnam_withoutlatin.css");
 @import url("reusables.css");
 @import url("utilities.css");
-@import url("login.css");
+@import url("responsive.css");
+@import url("main.css");
 
 .image_wrapper {
   background-image: url(../img/login_1.jpg);

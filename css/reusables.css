@@ -1,6 +1,7 @@
 @import url("shabnam_withoutlatin.css");
 @import url("reusables.css");
 @import url("utilities.css");
+@import url("responsive.css");
 @import url("login.css");
 
 .flex {
@@ -33,10 +34,6 @@
 
 .grow-3 {
   flex-grow: 3;
-}
-
-.cgap-1 {
-  column-gap: 10px;
 }
 
 .padding-1 {
@@ -153,10 +150,6 @@ li {
 
 .border-black-left {
   border-left: 1px #222 dashed;
-}
-
-.border-black-bottom {
-  border-bottom: 1px #222 solid;
 }
 
 .prices_users--types {

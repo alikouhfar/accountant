@@ -1,0 +1,187 @@
+@media screen and (max-width: 1290px) {
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    grid-template-rows: 2fr 1fr;
+    height: 90vh;
+  }
+
+  #prices {
+    grid-row: 1 / span 2;
+  }
+
+  #receipt {
+    border-bottom: 2px #222 solid;
+    border-left: none;
+  }
+
+  .receipt_wrapper--content {
+    overflow-y: scroll !important;
+    max-height: 250px;
+  }
+
+  #extra {
+    flex-direction: row;
+    column-gap: 30px;
+    align-items: center;
+  }
+
+  #brief {
+    border-bottom: none;
+    height: auto;
+  }
+
+  #buttons {
+    flex-grow: 1;
+    padding-top: 0;
+  }
+
+  .buttons_wrapper {
+    gap: 15px;
+  }
+
+  .btn {
+    height: 60px;
+  }
+
+  .brief_wrapper {
+    display: flex;
+    column-gap: 20px;
+  }
+
+  .brief_full,
+  .brief_others,
+  .brief_premium,
+  .brief_massage {
+    background-color: rgba(70, 150, 180, 0.1);
+    padding: 25px 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .app {
+    padding: 20px 40px;
+  }
+
+  .welcome_message {
+    font-size: 1.5rem;
+  }
+
+  .welcome_date {
+    font-size: 1rem;
+  }
+
+  .users {
+    align-items: center;
+    font-size: 20px;
+  }
+
+  .user_active {
+    font-size: 28px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #prices {
+    border-left: none;
+    padding: 20px;
+    border-bottom: 1px #222 dashed;
+  }
+
+  .prices_users {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+  }
+
+  .prices_users--types {
+    display: flex;
+    align-items: center;
+    height: 25px;
+    background-color: rgba(0, 135, 180, 0.5);
+    box-shadow: 1px 1px 1px #888888;
+  }
+
+  .btn_title {
+    font-size: 9px;
+  }
+
+  .btn_price {
+    font-size: 1rem;
+    font-family: Shabnam;
+  }
+
+  #receipt {
+    flex-grow: 1;
+    border-left: none;
+    padding: 20px;
+    border-bottom: 1px #222 dashed;
+    justify-content: flex-start;
+  }
+
+  .receipt_wrapper--content {
+    overflow-y: scroll !important;
+    max-height: 80%;
+  }
+
+  .table_header td {
+    font-size: 1rem;
+  }
+
+  .table_header td,
+  tr td {
+    padding: 0.6rem 1.6rem;
+    text-align: center;
+    width: 7.2rem;
+  }
+
+  .previous_total--fee,
+  .final_total--fee {
+    font-size: 20px;
+  }
+
+  #extra {
+    padding: 20px;
+  }
+
+  .brief_wrapper ion-icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .brief_full,
+  .brief_others,
+  .brief_premium,
+  .brief_massage {
+    background-color: rgba(70, 150, 180, 0.1);
+    padding: 18px 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .brief_title {
+    font-size: 10px;
+  }
+
+  .brief_wrapper div h5:last-child {
+    font-size: 15px;
+  }
+
+  #buttons {
+    flex-grow: 1;
+  }
+
+  .btn {
+    height: 48px;
+  }
+
+  .logout {
+    font-size: 10px;
+    font-weight: normal;
+  }
+}
