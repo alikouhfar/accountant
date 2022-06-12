@@ -37,6 +37,7 @@ input:focus {
   height: 25px;
   width: 65px;
   background-color: rgba(230, 0, 0);
+  border: 2px #222 solid;
   color: #fff;
   cursor: pointer;
   font-size: 12px;
@@ -53,6 +54,7 @@ input:focus {
   height: 25px;
   width: 65px;
   background-color: rgb(230, 220, 0, 0.7);
+  border: 2px #222 solid;
   cursor: pointer;
   font-size: 12px;
   font-family: Shabnam;
