@@ -1,0 +1,44 @@
+@font-face {
+  font-family: Shabnam;
+  src: url("../fonts/Shabnam/Farsi-Digits-Without-Latin/Shabnam-FD-WOL.eot");
+  src: url("../fonts/Shabnam/Farsi-Digits-Without-Latin/Shabnam-FD-WOL.eot?#iefix")
+      format(
+        "../fonts/Shabnam/Farsi-Digits-Without-Latin/Shabnam-FD-WOL-opentype"
+      ),
+    url("../fonts/Shabnam/Farsi-Digits-Without-Latin/Shabnam-FD-WOL.woff")
+      format("woff"),
+    url("../fonts/Shabnam/Farsi-Digits-Without-Latin/Shabnam-FD-WOL.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Shabnam;
+  src: url("../fonts/Shabnam/Farsi-Digits-Without-Latin/Shabnam-Bold-FD-WOL.eot");
+  src: url("../fonts/Shabnam/Farsi-Digits-Without-Latin/Shabnam-Bold-FD-WOL.eot?#iefix")
+      format(
+        "../fonts/Shabnam/Farsi-Digits-Without-Latin/Shabnam-Bold-FD-WOL-opentype"
+      ),
+    url("../fonts/Shabnam/Farsi-Digits-Without-Latin/Shabnam-Bold-FD-WOL.woff")
+      format("woff"),
+    url("../fonts/Shabnam/Farsi-Digits-Without-Latin/Shabnam-Bold-FD-WOL.ttf")
+      format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Shabnam;
+  src: url("../fonts/Shabnam/Farsi-Digits-Without-Latin/Shabnam-Light-FD-WOL.eot");
+  src: url("../fonts/Shabnam/Farsi-Digits-Without-Latin/Shabnam-Light-FD-WOL.eot?#iefix")
+      format(
+        "../fonts/Shabnam/Farsi-Digits-Without-Latin/Shabnam-Light-FD-WOL-opentype"
+      ),
+    url("../fonts/Shabnam/Farsi-Digits-Without-Latin/Shabnam-Light-FD-WOL.woff")
+      format("woff"),
+    url("../fonts/Shabnam/Farsi-Digits-Without-Latin/Shabnam-Light-FD-WOL.ttf")
+      format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}

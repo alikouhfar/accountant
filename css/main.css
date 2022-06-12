@@ -1,4 +1,4 @@
-@import url("iransans.css");
+@import url("shabnam_withoutlatin.css");
 @import url("reusables.css");
 @import url("utilities.css");
 @import url("login.css");
@@ -11,7 +11,7 @@
 
 html {
   font-size: 62.5%;
-  font-family: IRANSans;
+  font-family: Shabnam;
   direction: rtl;
 }
 
@@ -24,6 +24,14 @@ html {
   padding: 30px 60px;
 }
 
+.users {
+  font-size: 25px;
+}
+
+.users span {
+  line-height: 1;
+}
+
 .content {
   margin-top: 10px;
   height: 75vh;
@@ -32,4 +40,90 @@ html {
 footer {
   text-align: left;
   margin-left: 60px;
+}
+
+.welcome_date {
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+#prices {
+  flex-basis: 20%;
+}
+
+.prices_users {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+#receipt {
+  flex-basis: 60%;
+  justify-content: space-between;
+  row-gap: 3px;
+}
+
+.receipt_wrapper--content {
+  overflow-y: scroll;
+  flex-grow: 1;
+}
+
+.receipt_total {
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.previous_total--fee,
+.final_total--fee {
+  font-size: 30px;
+}
+
+#extra {
+  flex-basis: 20%;
+}
+
+#brief {
+  height: 70%;
+}
+
+.brief_wrapper ion-icon {
+  color: rgba(0, 135, 180);
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.brief_wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.brief_full,
+.brief_others,
+.brief_premium,
+.brief_massage {
+  background-color: rgba(70, 150, 180, 0.1);
+  padding: 25px 0;
+}
+
+.brief_title {
+  font-size: 12px;
+}
+
+.brief_wrapper div h5:last-child {
+  font-size: 18px;
+}
+
+#buttons {
+  padding-top: 30px;
+}
+
+.buttons_wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.btn_warning {
+  grid-column: 1 / span 2;
 }

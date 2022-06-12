@@ -1,4 +1,4 @@
-@import url("iransans.css");
+@import url("shabnam_withoutlatin.css");
 @import url("reusables.css");
 @import url("utilities.css");
 @import url("login.css");
@@ -33,6 +33,10 @@
 
 .grow-3 {
   flex-grow: 3;
+}
+
+.cgap-1 {
+  column-gap: 10px;
 }
 
 .padding-1 {
@@ -115,6 +119,14 @@
   padding: 0 60px;
 }
 
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-15 {
+  margin-bottom: 15px;
+}
+
 h1 {
   font-size: 2rem;
 }
@@ -139,15 +151,33 @@ li {
   list-style: none;
 }
 
-.btn_title {
-  display: flex;
-  align-items: center;
-  border-left: 1px #333 solid;
-  background-color: rgba(0, 150, 150, 0.5);
-  padding: 5px 15px;
-  height: 100%;
+.border-black-left {
+  border-left: 1px #222 dashed;
 }
 
-.border-black-left {
-  border-left: 2px #222 solid;
+.border-black-bottom {
+  border-bottom: 1px #222 solid;
+}
+
+.prices_users--types {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  background-color: rgba(0, 135, 180, 0.5);
+  box-shadow: 1px 1px 1px #888888;
+}
+
+.btn_title {
+  flex-basis: 60%;
+  text-align: center;
+  font-size: 11px;
+}
+
+.user_active {
+  font-size: 35px;
+  color: rgba(0, 135, 180);
+}
+
+.user_inactive {
+  color: rgba(1, 100, 130, 0.4);
 }

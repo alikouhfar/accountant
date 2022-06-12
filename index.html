@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" translate="no">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,7 +8,7 @@
     <title>مدیریت فروش روزانه | نسخه 2</title>
   </head>
   <body>
-    <aside id="login_page">
+    <!-- <aside id="login_page">
       <div class="flex align-1">
         <div class="flex login_wrapper px-6">
           <div class="login_wrapper--title">
@@ -39,49 +39,198 @@
         </div>
         <div class="image_wrapper grow-1"></div>
       </div>
-    </aside>
-    <!-- <main id="app_page">
+    </aside> -->
+    <main id="app_page">
       <div class="app">
         <header>
           <div class="flex justify-2 align-1">
             <div class="welcom_wrapper">
-              <h2 class="welcome_message">
+              <h1 class="welcome_message">
                 کاربر سانس <span class="welcome_user"></span> خوش آمدید.
-              </h2>
+              </h1>
             </div>
-            <div class="users">
-              <span class="users_male">آقایان</span> |
-              <span class="users_female">بانوان</span>
+            <div class="users flex align-1">
+              <span class="users_male user_active"
+                ><ion-icon name="man"></ion-icon
+              ></span>
+              <span>|</span>
+              <span class="users_female user_inactive"
+                ><ion-icon name="woman"></ion-icon
+              ></span>
             </div>
           </div>
           <div class="flex justify-2 align-1">
             <div class="welcom_wrapper">
               <h4 class="welcome_date">
-                امروز <span class="date"></span> جمعه 20 خرداد 1401 | 18:00
+                امروز <span class="date"></span> | <span class="time"></span>
               </h4>
             </div>
             <input type="button" class="logout bad" value="خروج" />
           </div>
         </header>
         <div class="content border-black flex">
-          <div id="prices" class="border-black-left padding-3">
+          <div id="prices" class="border-black-left padding-4">
             <ul class="prices_users">
               <li class="prices_users--types">
+                <h4 id="full_price" class="user_type btn_title">تمام بها</h4>
+                <button class="btn_price">30000</button>
+              </li>
+              <li class="prices_users--types">
+                <h4 id="full_price" class="user_type btn_title">نیم بها</h4>
+                <button class="btn_price">20000</button>
+              </li>
+              <li class="prices_users--types">
+                <h4 id="full_price" class="user_type btn_title">ایران خودرو</h4>
+                <button class="btn_price">15000</button>
+              </li>
+              <li class="prices_users--types">
                 <h4 id="full_price" class="user_type btn_title">
-                  بلیط تمام بها
+                  بلیط اینترنتی
                 </h4>
-                <input type="button" class="prices_btn" value="30000" />
+                <button class="btn_price">0</button>
+              </li>
+              <li class="prices_users--types">
+                <h4 id="full_price" class="user_type btn_title">شهرداری</h4>
+                <button class="btn_price">0</button>
+              </li>
+              <li class="prices_users--types">
+                <h4 id="full_price" class="user_type btn_title">دوره آموزشی</h4>
+                <button class="btn_price">800000</button>
+              </li>
+              <li class="prices_users--types">
+                <h4 id="full_price" class="user_type btn_title">
+                  عضویت 30 جلسه‌ای
+                </h4>
+                <button class="btn_price">700000</button>
+              </li>
+              <li class="prices_users--types">
+                <h4 id="full_price" class="user_type btn_title">
+                  ماساژ نیم ساعت
+                </h4>
+                <button class="btn_price">150000</button>
+              </li>
+              <li class="prices_users--types">
+                <h4 id="full_price" class="user_type btn_title">
+                  ماساژ یک ساعت
+                </h4>
+                <button class="btn_price">250000</button>
+              </li>
+              <li class="prices_users--types">
+                <h4 id="full_price" class="user_type btn_title">مهمان پرسنل</h4>
+                <button class="btn_price">0</button>
               </li>
             </ul>
           </div>
-          <div id="receipt" class="border-black-left grow-3 padding-3"></div>
-          <div id="extra" class="padding-3">
-            <div id="brief"></div>
-            <div id="buttons"></div>
+          <div id="receipt" class="border-black-left padding-3 flex flex-dir-1">
+            <div class="receipt_wrapper--title">
+              <table class="table_header">
+                <tr>
+                  <td>ردیف</td>
+                  <td>کد</td>
+                  <td>عنوان</td>
+                  <td>تعداد</td>
+                  <td>فی</td>
+                  <td>جمع</td>
+                </tr>
+              </table>
+            </div>
+            <div class="receipt_wrapper--content">
+              <table class="sell_list">
+                <tr>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>نیم بها</td>
+                  <td>4</td>
+                  <td>20000</td>
+                  <td>80000</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>1</td>
+                  <td>تمام بها</td>
+                  <td>3</td>
+                  <td>30000</td>
+                  <td>90000</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>8</td>
+                  <td>ماساژ نیم ساعت</td>
+                  <td>1</td>
+                  <td>150000</td>
+                  <td>150000</td>
+                </tr>
+              </table>
+            </div>
+            <div class="receipt_total flex">
+              <div class="previous_total flex cgap-1 align-1">
+                <h4 class="previous_total--title">فاکتور قبلی :</h4>
+                <span class="previous_total--fee">0</span>
+              </div>
+              <div class="final_total">
+                <div class="final_total flex cgap-1 align-1">
+                  <h4 class="final_total--title">جمع کل :</h4>
+                  <span class="final_total--fee">320000</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="extra" class="flex flex-dir-1 padding-3">
+            <div id="brief" class="border-black-bottom">
+              <div class="brief_wrapper">
+                <div class="brief_full flex flex-dir-1 align-1">
+                  <div class="brief_full--icon">
+                    <ion-icon name="person"></ion-icon>
+                  </div>
+                  <h5 class="brief_title">تمام بها</h5>
+                  <h5 class="brief_full--count">5</h5>
+                </div>
+                <div class="brief_others flex flex-dir-1 align-1">
+                  <div class="brief_others--icon">
+                    <ion-icon name="people-outline"></ion-icon>
+                  </div>
+                  <h5 class="brief_title">نیم بها و غیره</h5>
+                  <h5 class="brief_others--count">3</h5>
+                </div>
+                <div class="brief_premium flex flex-dir-1 align-1">
+                  <div class="brief_premium--icon">
+                    <ion-icon name="id-card"></ion-icon>
+                  </div>
+                  <h5 class="brief_title">اشتراک ویژه</h5>
+                  <h5 class="brief_premium--count">1</h5>
+                </div>
+                <div class="brief_massage flex flex-dir-1 align-1">
+                  <div class="brief_massage--icon">
+                    <ion-icon name="hand-right"></ion-icon
+                    ><ion-icon name="hand-left"></ion-icon>
+                  </div>
+                  <h5 class="brief_title">ماساژ</h5>
+                  <h5 class="brief_massage--count">2</h5>
+                </div>
+              </div>
+            </div>
+            <div id="buttons">
+              <div class="buttons_wrapper">
+                <button class="btn_good btn good">چاپ رسید</button>
+                <button class="btn_bad btn bad">حذف</button>
+                <button class="btn_warning btn warning">لیست فروش</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <footer>&copy; 2022 | تمامی حقوق محفوظ است.</footer>
-    </main> -->
+    </main>
+    <script src="js/main.js"></script>
+    <script src="js/dates.js"></script>
+    <script src="js/functions.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
