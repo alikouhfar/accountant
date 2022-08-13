@@ -4,53 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="js/model.js"></script>
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/laptop.css" />
     <title>مدیریت فروش روزانه | نسخه 2</title>
   </head>
   <body>
-    <!-- <aside id="login_page">
-      <div class="flex align-1">
-        <div class="flex login_wrapper px-6">
-          <div class="login_wrapper--title">
-            <h1 class="login_wrapper--welcome">
-              به سامانه حسابداری استخر گلستان خوش آمدید
-            </h1>
-          </div>
-          <div class="login_wrapper--information">
-            <div class="username_wrapper py-2">
-              <h3 class="username_title py-1">نام کاربری</h3>
-              <input
-                type="text"
-                class="username"
-                placeholder="نام کاربری خود را وارد کنید"
-              />
-            </div>
-            <div class="password_wrapper">
-              <h3 class="username_title py-1">رمز عبور</h3>
-              <input
-                type="password"
-                class="password"
-                placeholder="**********"
-              />
-              <input class="good" type="button" value="ورود" />
-            </div>
-          </div>
-          <h5 class="login_version">نسخه 2.00</h5>
-        </div>
-        <div class="image_wrapper grow-1"></div>
-      </div>
-    </aside> -->
     <main id="app_page">
       <div class="app">
         <header>
           <div class="header_wrapper flex">
             <div class="welcom_wrapper">
               <h1 class="welcome_message">
-                کاربر سانس <span class="welcome_user"></span> خوش آمدید.
+                کاربر سانس <span class="welcome_user">آقایان</span> خوش آمدید.
               </h1>
             </div>
-            <div class="users flex">
+            <div class="users flex hidden">
               <span class="users_male user_active"
                 ><ion-icon name="man"></ion-icon
               ></span>
@@ -66,298 +34,170 @@
                 امروز <span class="date"></span> | <span class="time"></span>
               </h4>
             </div>
-            <input type="button" class="logout bad" value="خروج" />
+            <input type="button" class="logout bad hidden" value="خروج" />
           </div>
         </header>
         <div class="content border-black">
-          <div id="prices" class="padding-4">
-            <ul class="prices_users">
-              <li class="prices_users--types">
-                <h4 id="full_price" class="user_type btn_title">تمام بها</h4>
-                <button class="btn_price">30000</button>
-              </li>
-              <li class="prices_users--types">
-                <h4 id="full_price" class="user_type btn_title">نیم بها</h4>
-                <button class="btn_price">20000</button>
-              </li>
-              <li class="prices_users--types">
-                <h4 id="full_price" class="user_type btn_title">ایران خودرو</h4>
-                <button class="btn_price">15000</button>
-              </li>
-              <li class="prices_users--types">
-                <h4 id="full_price" class="user_type btn_title">
-                  بلیط اینترنتی
-                </h4>
-                <button class="btn_price">0</button>
-              </li>
-              <li class="prices_users--types">
-                <h4 id="full_price" class="user_type btn_title">شهرداری</h4>
-                <button class="btn_price">0</button>
-              </li>
-              <li class="prices_users--types">
-                <h4 id="full_price" class="user_type btn_title">دوره آموزشی</h4>
-                <button class="btn_price">800000</button>
-              </li>
-              <li class="prices_users--types">
-                <h4 id="full_price" class="user_type btn_title">
-                  عضویت 30 جلسه‌ای
-                </h4>
-                <button class="btn_price">700000</button>
-              </li>
-              <li class="prices_users--types">
-                <h4 id="full_price" class="user_type btn_title">
-                  ماساژ نیم ساعت
-                </h4>
-                <button class="btn_price">150000</button>
-              </li>
-              <li class="prices_users--types">
-                <h4 id="full_price" class="user_type btn_title">
-                  ماساژ یک ساعت
-                </h4>
-                <button class="btn_price">250000</button>
-              </li>
-              <li class="prices_users--types">
-                <h4 id="full_price" class="user_type btn_title">مهمان پرسنل</h4>
-                <button class="btn_price">0</button>
-              </li>
-            </ul>
+          <div id="prices" class="padding-3">
+            <div class="prices__users">
+              <button
+                class="users__types px-1"
+                data-title="تمام بها"
+                data-price="30000"
+              >
+                <h4 class="btn__title">تمام بها</h4>
+                |
+                <h3 class="btn__price">30000</h3>
+              </button>
+              <button
+                class="users__types px-1"
+                data-title="نیم بها"
+                data-price="20000"
+              >
+                <h4 class="btn__title">نیم بها</h4>
+                |
+                <h3 class="btn__price">20000</h3>
+              </button>
+              <button
+                class="users__types px-1"
+                data-title="ایران خودرو"
+                data-price="25000"
+              >
+                <h4 class="btn__title">ایران خودرو</h4>
+                |
+                <h3 class="btn__price">25000</h3>
+              </button>
+              <button
+                class="users__types px-1"
+                data-title="کادر درمان"
+                data-price="15000"
+              >
+                <h4 class="btn__title">کادر درمان</h4>
+                |
+                <h3 class="btn__price">15000</h3>
+              </button>
+              <button
+                class="users__types px-1"
+                data-title="بلیط پیش‌فروش"
+                data-price="0"
+              >
+                <h4 class="btn__title">بلیط پیش‌فروش</h4>
+                |
+                <h3 class="btn__price">0</h3>
+              </button>
+              <button
+                class="users__types px-1"
+                data-title="بلیط اینترنتی"
+                data-price="0"
+              >
+                <h4 class="btn__title">بلیط اینترنتی</h4>
+                |
+                <h3 class="btn__price">0</h3>
+              </button>
+              <button
+                class="users__types px-1"
+                data-title="شهرداری"
+                data-price="0"
+              >
+                <h4 class="btn__title">شهرداری</h4>
+                |
+                <h3 class="btn__price">0</h3>
+              </button>
+              <button
+                class="users__types px-1"
+                data-title="مهمان پرسنل"
+                data-price="0"
+              >
+                <h4 class="btn__title">مهمان پرسنل</h4>
+                |
+                <h3 class="btn__price">0</h3>
+              </button>
+              <button
+                class="users__types px-1"
+                data-title="آموزش آقایان"
+                data-price="0"
+              >
+                <h4 class="btn__title">آموزش آقایان</h4>
+                |
+                <h3 class="btn__price">0</h3>
+              </button>
+              <button
+                class="users__types px-1"
+                data-title="عضویت 30 جلسه‌ای"
+                data-price="0"
+              >
+                <h4 class="btn__title">عضویت 30 جلسه‌ای</h4>
+                |
+                <h3 class="btn__price">0</h3>
+              </button>
+              <button
+                class="users__types px-1"
+                data-title="ثبت دوره آموزشی"
+                data-price="1000000"
+              >
+                <h4 class="btn__title">ثبت دوره آموزشی</h4>
+                |
+                <h3 class="btn__price">1000000</h3>
+              </button>
+              <button
+                class="users__types px-1"
+                data-title="ثبت کارت عضویت"
+                data-price="700000"
+              >
+                <h4 class="btn__title">ثبت کارت عضویت</h4>
+                |
+                <h3 class="btn__price">700000</h3>
+              </button>
+              <button
+                class="users__types px-1"
+                data-title="ماساژ نیم ساعت"
+                data-price="150000"
+              >
+                <h4 class="btn__title">ماساژ نیم ساعت</h4>
+                |
+                <h3 class="btn__price">150000</h3>
+              </button>
+              <button
+                class="users__types px-1"
+                data-title="ماساژ یک ساعت"
+                data-price="250000"
+              >
+                <h4 class="btn__title">ماساژ یک ساعت</h4>
+                |
+                <h3 class="btn__price">250000</h3>
+              </button>
+              <!-- ***** Empty Buttons - Sample *****
+              <button
+                class="users__types px-1"
+                data-title="TITLE"
+                data-price="PRICE"
+              >
+                <h4 class="btn__title">TITLE</h4>
+                |
+                <h3 class="btn__price">PRICE</h3>
+              </button>
+              -->
+            </div>
           </div>
           <div id="receipt" class="padding-3 flex">
-            <div class="receipt_wrapper--title">
-              <table class="table_header">
-                <tr>
-                  <td>ردیف</td>
+            <div class="receipt_wrapper">
+              <table class="sell_list">
+                <thead class="table_header">
                   <td>کد</td>
                   <td>عنوان</td>
                   <td>تعداد</td>
                   <td>فی</td>
                   <td>جمع</td>
-                </tr>
-              </table>
-            </div>
-            <div class="receipt_wrapper--content">
-              <table class="sell_list">
-                <tr>
-                  <td class="row">1</td>
-                  <td class="code">2</td>
-                  <td class="title">نیم بها</td>
-                  <td class="count">4</td>
-                  <td class="price">20000</td>
-                  <td class="total">80000</td>
-                </tr>
-                <tr>
-                  <td class="row">1</td>
-                  <td class="code">2</td>
-                  <td class="title">نیم بها</td>
-                  <td class="count">4</td>
-                  <td class="price">20000</td>
-                  <td class="total">80000</td>
-                </tr>
-                <tr>
-                  <td class="row">1</td>
-                  <td class="code">2</td>
-                  <td class="title">نیم بها</td>
-                  <td class="count">4</td>
-                  <td class="price">20000</td>
-                  <td class="total">80000</td>
-                </tr>
-                <tr>
-                  <td class="row">1</td>
-                  <td class="code">2</td>
-                  <td class="title">نیم بها</td>
-                  <td class="count">4</td>
-                  <td class="price">20000</td>
-                  <td class="total">80000</td>
-                </tr>
-                <tr>
-                  <td class="row">1</td>
-                  <td class="code">2</td>
-                  <td class="title">نیم بها</td>
-                  <td class="count">4</td>
-                  <td class="price">20000</td>
-                  <td class="total">80000</td>
-                </tr>
-                <tr>
-                  <td class="row">1</td>
-                  <td class="code">2</td>
-                  <td class="title">نیم بها</td>
-                  <td class="count">4</td>
-                  <td class="price">20000</td>
-                  <td class="total">80000</td>
-                </tr>
-                <tr>
-                  <td class="row">1</td>
-                  <td class="code">2</td>
-                  <td class="title">نیم بها</td>
-                  <td class="count">4</td>
-                  <td class="price">20000</td>
-                  <td class="total">80000</td>
-                </tr>
-                <tr>
-                  <td class="row">1</td>
-                  <td class="code">2</td>
-                  <td class="title">نیم بها</td>
-                  <td class="count">4</td>
-                  <td class="price">20000</td>
-                  <td class="total">80000</td>
-                </tr>
-                <tr>
-                  <td class="row">1</td>
-                  <td class="code">2</td>
-                  <td class="title">نیم بها</td>
-                  <td class="count">4</td>
-                  <td class="price">20000</td>
-                  <td class="total">80000</td>
-                </tr>
-                <tr>
-                  <td class="row">1</td>
-                  <td class="code">2</td>
-                  <td class="title">نیم بها</td>
-                  <td class="count">4</td>
-                  <td class="price">20000</td>
-                  <td class="total">80000</td>
-                </tr>
-                <tr>
-                  <td class="row">1</td>
-                  <td class="code">2</td>
-                  <td class="title">نیم بها</td>
-                  <td class="count">4</td>
-                  <td class="price">20000</td>
-                  <td class="total">80000</td>
-                </tr>
-                <tr>
-                  <td class="row">1</td>
-                  <td class="code">2</td>
-                  <td class="title">نیم بها</td>
-                  <td class="count">4</td>
-                  <td class="price">20000</td>
-                  <td class="total">80000</td>
-                </tr>
-                <tr>
-                  <td class="row">1</td>
-                  <td class="code">2</td>
-                  <td class="title">نیم بها</td>
-                  <td class="count">4</td>
-                  <td class="price">20000</td>
-                  <td class="total">80000</td>
-                </tr>
-                <tr>
-                  <td class="row">1</td>
-                  <td class="code">2</td>
-                  <td class="title">نیم بها</td>
-                  <td class="count">4</td>
-                  <td class="price">20000</td>
-                  <td class="total">80000</td>
-                </tr>
-                <tr>
-                  <td class="row">1</td>
-                  <td class="code">2</td>
-                  <td class="title">نیم بها</td>
-                  <td class="count">4</td>
-                  <td class="price">20000</td>
-                  <td class="total">80000</td>
-                </tr>
-                <tr>
-                  <td class="row">1</td>
-                  <td class="code">2</td>
-                  <td class="title">نیم بها</td>
-                  <td class="count">4</td>
-                  <td class="price">20000</td>
-                  <td class="total">80000</td>
-                </tr>
-                <tr>
-                  <td class="row">1</td>
-                  <td class="code">2</td>
-                  <td class="title">نیم بها</td>
-                  <td class="count">4</td>
-                  <td class="price">20000</td>
-                  <td class="total">80000</td>
-                </tr>
-                <tr>
-                  <td class="row">1</td>
-                  <td class="code">2</td>
-                  <td class="title">نیم بها</td>
-                  <td class="count">4</td>
-                  <td class="price">20000</td>
-                  <td class="total">80000</td>
-                </tr>
-                <tr>
-                  <td class="row">1</td>
-                  <td class="code">2</td>
-                  <td class="title">نیم بها</td>
-                  <td class="count">4</td>
-                  <td class="price">20000</td>
-                  <td class="total">80000</td>
-                </tr>
-                <tr>
-                  <td class="row">1</td>
-                  <td class="code">2</td>
-                  <td class="title">نیم بها</td>
-                  <td class="count">4</td>
-                  <td class="price">20000</td>
-                  <td class="total">80000</td>
-                </tr>
-
-                <tr>
-                  <td class="row">1</td>
-                  <td class="code">2</td>
-                  <td class="title">نیم بها</td>
-                  <td class="count">4</td>
-                  <td class="price">20000</td>
-                  <td class="total">80000</td>
-                </tr>
-
-                <tr>
-                  <td class="row">1</td>
-                  <td class="code">2</td>
-                  <td class="title">نیم بها</td>
-                  <td class="count">4</td>
-                  <td class="price">20000</td>
-                  <td class="total">80000</td>
-                </tr>
-
-                <tr>
-                  <td class="row">1</td>
-                  <td class="code">2</td>
-                  <td class="title">نیم بها</td>
-                  <td class="count">4</td>
-                  <td class="price">20000</td>
-                  <td class="total">80000</td>
-                </tr>
-
-                <tr>
-                  <td class="row">1</td>
-                  <td class="code">2</td>
-                  <td class="title">نیم بها</td>
-                  <td class="count">4</td>
-                  <td class="price">20000</td>
-                  <td class="total">80000</td>
-                </tr>
-
-                <tr>
-                  <td class="row">1</td>
-                  <td class="code">2</td>
-                  <td class="title">نیم بها</td>
-                  <td class="count">4</td>
-                  <td class="price">20000</td>
-                  <td class="total">80000</td>
-                </tr>
-                <tr>
-                  <td class="row">1</td>
-                  <td class="code">2</td>
-                  <td class="title">نیم بها</td>
-                  <td class="count">4</td>
-                  <td class="price">20000</td>
-                  <td class="total">80000</td>
-                </tr>
-                <tr>
-                  <td class="row">1</td>
-                  <td class="code">2</td>
-                  <td class="title">نیم بها</td>
-                  <td class="count">4</td>
-                  <td class="price">20000</td>
-                  <td class="total">80000</td>
-                </tr>
+                </thead>
+                <tbody class="table__body">
+                  <!-- <tr data-id>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                  </tr> -->
+                </tbody>
               </table>
             </div>
             <div class="receipt_total flex">
@@ -368,7 +208,7 @@
               <div class="final_total">
                 <div class="final_total flex">
                   <h4 class="final_total--title">جمع کل :</h4>
-                  <span class="final_total--fee">320000</span>
+                  <span class="final_total--fee">0</span>
                 </div>
               </div>
             </div>
@@ -381,21 +221,21 @@
                     <ion-icon name="person"></ion-icon>
                   </div>
                   <h5 class="brief_title">تمام بها</h5>
-                  <h5 class="brief_full--count">5</h5>
+                  <h5 class="brief_full--count">0</h5>
                 </div>
                 <div class="brief_others flex">
                   <div class="brief_others--icon">
                     <ion-icon name="people-outline"></ion-icon>
                   </div>
                   <h5 class="brief_title">نیم بها و غیره</h5>
-                  <h5 class="brief_others--count">3</h5>
+                  <h5 class="brief_others--count">0</h5>
                 </div>
                 <div class="brief_premium flex">
                   <div class="brief_premium--icon">
                     <ion-icon name="id-card"></ion-icon>
                   </div>
                   <h5 class="brief_title">اشتراک ویژه</h5>
-                  <h5 class="brief_premium--count">1</h5>
+                  <h5 class="brief_premium--count">0</h5>
                 </div>
                 <div class="brief_massage flex">
                   <div class="brief_massage--icon">
@@ -403,7 +243,7 @@
                     ><ion-icon name="hand-left"></ion-icon>
                   </div>
                   <h5 class="brief_title">ماساژ</h5>
-                  <h5 class="brief_massage--count">2</h5>
+                  <h5 class="brief_massage--count">0</h5>
                 </div>
               </div>
             </div>
@@ -417,11 +257,46 @@
           </div>
         </div>
       </div>
-      <footer>&copy; 2022 | تمامی حقوق محفوظ است.</footer>
+      <footer>&copy; 1401 | تمامی حقوق محفوظ است.</footer>
     </main>
-    <script src="js/main.js"></script>
-    <script src="js/dates.js"></script>
-    <script src="js/functions.js"></script>
+    <aside id="log" class="hidden">
+      <div class="log__wrapper">
+        <button class="log__close bad">×</button>
+        <h2 class="log__title">لیست فروش</h2>
+        <div class="log__container">
+          <div class="log">
+            <table class="log__details">
+              <thead>
+                <td>کد</td>
+                <td>عنوان</td>
+                <td>تعداد</td>
+              </thead>
+              <tbody class="log__details--body">
+                <!-- <tr>
+                <td class="log__detail--code">1</td>
+                <td class="log__detail--title">تمام بها</td>
+                <td class="log__detail--count">100</td>
+              </tr>
+              <tr>
+                <td class="log__detail--code">2</td>
+                <td class="log__detail--title">نیم بها</td>
+                <td class="log__detail--count">200</td>
+              </tr>
+              <tr>
+                <td class="log__detail--code">3</td>
+                <td class="log__detail--title">شهرداری</td>
+                <td class="log__detail--count">50</td>
+              </tr> -->
+              </tbody>
+            </table>
+          </div>
+          <div class="total">
+            <h3 class="log__total--title">جمع کل :</h3>
+            <h3 class="log__total--fee">0</h3>
+          </div>
+        </div>
+      </div>
+    </aside>
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"

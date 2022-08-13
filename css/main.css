@@ -1,7 +1,4 @@
 @import url("shabnam_withoutlatin.css");
-@import url("reusables.css");
-@import url("utilities.css");
-@import url("login.css");
 
 * {
   box-sizing: border-box;
@@ -15,8 +12,12 @@ html {
   direction: rtl;
 }
 
+body {
+  position: relative;
+}
+
 #app_page {
-  background-color: rgba(0, 200, 200, 0.12);
+  background-color: rgba(0, 200, 200, 0.1);
   height: 100vh;
 }
 
@@ -55,27 +56,27 @@ footer {
 }
 
 #prices {
-  flex-basis: 20%;
+  flex-basis: 30%;
   border-left: 1px #222 dashed;
 }
 
-.prices_users {
-  display: flex;
-  flex-direction: column;
-  row-gap: 15px;
+.prices__users {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
 }
 
 #receipt {
-  flex-basis: 60%;
+  flex-basis: 50%;
   flex-direction: column;
   justify-content: space-between;
   row-gap: 3px;
   border-left: 1px #222 dashed;
 }
 
-.receipt_wrapper--content {
-  overflow-y: scroll;
+.receipt_wrapper {
   flex-grow: 1;
+  overflow-y: scroll;
 }
 
 .receipt_total {
@@ -146,4 +147,233 @@ footer {
 
 .btn_warning {
   grid-column: 1 / span 2;
+}
+
+input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 100%;
+  padding: 10px;
+  font-family: Shabnam;
+}
+
+input:focus {
+  border: none;
+}
+
+.good {
+  padding: 0;
+  height: 50px;
+  background-color: rgba(38, 230, 0, 0.7);
+  border: 2px #222 solid;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: Shabnam;
+  font-weight: bold;
+}
+
+.good:hover {
+  background-color: rgba(38, 230, 0);
+}
+
+.bad {
+  padding: 0;
+  height: 25px;
+  width: 65px;
+  background-color: rgba(230, 0, 0);
+  border: 2px #222 solid;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: Shabnam;
+  font-weight: bold;
+}
+
+.bad:hover {
+  background-color: rgb(190, 0, 0);
+}
+
+.warning {
+  padding: 0;
+  height: 25px;
+  width: 65px;
+  background-color: rgb(230, 220, 0, 0.7);
+  border: 2px #222 solid;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: Shabnam;
+  font-weight: bold;
+}
+
+.warning:hover {
+  background-color: rgb(230, 220, 0);
+}
+
+.users__types:hover {
+  cursor: pointer;
+}
+
+.table_header td {
+  background-color: rgba(0, 135, 180);
+  border: 1px #222 solid;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+tr:nth-child(odd) {
+  background-color: rgba(70, 150, 180, 0.2);
+}
+
+tr:nth-child(even) {
+  background-color: rgba(70, 150, 180, 0.1);
+}
+
+.table_header td {
+  padding: 0 1.5rem;
+  text-align: center;
+  width: 8rem;
+  height: 35px;
+}
+
+tr td {
+  padding: 0 1.6rem;
+  text-align: center;
+  width: 7rem;
+  height: 30px;
+}
+
+.table_header td:nth-child(1),
+tr td:nth-child(1) {
+  width: 5rem;
+}
+
+.table_header td:nth-child(2),
+tr td:nth-child(2) {
+  width: 55%;
+}
+
+.btn {
+  width: 100%;
+  height: 4.5rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.padding-1 {
+  padding: 10px;
+}
+
+.padding-2 {
+  padding: 20px;
+}
+
+.padding-3 {
+  padding: 30px;
+}
+
+.px-1 {
+  padding: 0 10px;
+}
+
+.border-black {
+  border: 2px #222 solid;
+}
+
+li {
+  list-style: none;
+}
+
+.border-black-left {
+  border-left: 1px #222 dashed;
+}
+
+.users__types {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 32px;
+  background-color: #fff;
+  border-radius: 15px;
+  border: 1px solid #222;
+}
+
+.btn__title,
+.btn__price {
+  font-size: 1.2rem;
+  font-family: Shabnam;
+  font-weight: normal;
+}
+
+.user_active {
+  font-size: 35px;
+  color: rgba(0, 135, 180);
+}
+
+.user_inactive {
+  color: rgba(1, 100, 130, 0.4);
+}
+
+.hidden {
+  display: none;
+}
+
+.log__wrapper {
+  position: relative;
+  background-color: rgb(250, 250, 250);
+  padding: 40px 20px;
+  text-align: center;
+  width: 420px;
+  border-radius: 15px;
+  border: 1px solid #222;
+}
+
+.log__close {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: none;
+  right: 20px;
+  top: 20px;
+}
+
+.log {
+  overflow-y: scroll;
+  height: 300px;
+  margin: 20px auto;
+}
+
+thead td {
+  background-color: rgba(0, 135, 180);
+}
+
+.log__details {
+  width: 100%;
+}
+
+#log {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blur {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+
+.log__total--fee {
+  font-size: 20px;
+}
+
+#prices button:first-child {
+  background-color: rgb(173, 240, 160);
+}
+
+#prices button:nth-child(2) {
+  background-color: rgb(173, 240, 160);
 }
