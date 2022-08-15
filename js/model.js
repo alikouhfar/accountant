@@ -136,6 +136,8 @@ priceBtns.forEach((element, index) => {
 });
 
 checkBtn.addEventListener("click", function () {
+  // Print Reciept
+
   const values = [...state.rows.values()];
   values.forEach((value) => {
     const code = value.code - 1;
@@ -245,3 +247,5 @@ closeLogBtn.addEventListener("click", function () {
   logParentEl.classList.toggle("hidden");
   appParentEl.classList.toggle("blur");
 });
+
+// Export Table as PDF
